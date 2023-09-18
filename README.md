@@ -63,13 +63,13 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Vetclinic <a name="Vetclinic Project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Vet Clinic ]** is a project that focuses on the creation of a database, and making queries to the database
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with"> Ruby om rails and prospe</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 

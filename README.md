@@ -52,11 +52,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](<replace-with-your-deployment-URL>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

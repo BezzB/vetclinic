@@ -61,3 +61,9 @@ SELECT AVG(weight_kg) FROM animals;
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 
 SELECT COUNT(*) FROM animals;
+
+UPDATE animals
+SET species = 'unspecified';
+SELECT species from animals;
+ROLLBACK;
+SELECT species from animals;

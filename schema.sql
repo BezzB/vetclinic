@@ -15,3 +15,27 @@ create table animals (
 
 ALTER TABLE animals
 ADD COLUMN species varchar(255);
+
+CREATE TABLE vets (
+    id serial PRIMARY KEY,
+    name varchar(255),
+    age integer,
+    date_of_graduation date
+);
+
+CREATE TABLE specializations (
+    id serial PRIMARY KEY,
+    vet_id integer,
+    species_id integer,
+    FOREIGN KEY (vet_id) REFERENCES vets(id),
+    FOREIGN KEY (species_id) REFERENCES species(id)
+);
+
+CREATE TABLE visits (
+    id serial PRIMARY KEY,
+    vet_id integer,
+    animal_id integer,
+    visit_date date,
+    FOREIGN KEY (vet_id) REFERENCES vets(id),
+    FOREIGN KEY (animal_id) REFERENCES animals(id)
+);

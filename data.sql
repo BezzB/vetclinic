@@ -151,3 +151,36 @@ VALUES (
     (SELECT id FROM animals WHERE name = 'Charmander'),
     '2021-02-24'
 );
+
+
+-- Insert Pokemon
+INSERT INTO species (name)
+VALUES ('Pokemon');
+
+-- Insert Digimon
+INSERT INTO species (name)
+VALUES ('Digimon');
+
+-- Insert Sam Smith
+INSERT INTO owners (full_name, age)
+VALUES ('Sam Smith', 34);
+
+-- Insert Jennifer Orwell
+INSERT INTO owners (full_name, age)
+VALUES ('Jennifer Orwell', 19);
+
+-- Insert Bob
+INSERT INTO owners (full_name, age)
+VALUES ('Bob', 45);
+
+-- Insert Melody Pond
+INSERT INTO owners (full_name, age)
+VALUES ('Melody Pond', 77);
+
+-- Insert Dean Winchester
+INSERT INTO owners (full_name, age)
+VALUES ('Dean Winchester', 14);
+
+-- Insert Jodie Whittaker
+INSERT INTO owners (full_name, age)
+VALUES ('Jodie Whittaker', 38);

@@ -68,67 +68,6 @@ SELECT species from animals;
 ROLLBACK;
 SELECT species from animals;
 
-ALTER TABLE animals
-DROP COLUMN species;
-
-ALTER TABLE animals
-ADD CONSTRAINT fk_owner
-FOREIGN KEY (owner_id)
-REFERENCES owners(id);
-
-ALTER TABLE animals
-ADD COLUMN owner_id integer;
-
-ALTER TABLE animals
-ADD CONSTRAINT fk_species
-FOREIGN KEY (species_id)
-REFERENCES species(id);
-
-ALTER TABLE animals
-ADD COLUMN species_id integer;
-
-CREATE TABLE species (
-    id serial PRIMARY KEY,
-    name varchar(255)
-);
-
-CREATE TABLE owners (
-    id serial PRIMARY KEY,
-    full_name varchar(255),
-    age integer
-);
-
--- Insert Pokemon
-INSERT INTO species (name)
-VALUES ('Pokemon');
-
--- Insert Digimon
-INSERT INTO species (name)
-VALUES ('Digimon');
-
--- Insert Sam Smith
-INSERT INTO owners (full_name, age)
-VALUES ('Sam Smith', 34);
-
--- Insert Jennifer Orwell
-INSERT INTO owners (full_name, age)
-VALUES ('Jennifer Orwell', 19);
-
--- Insert Bob
-INSERT INTO owners (full_name, age)
-VALUES ('Bob', 45);
-
--- Insert Melody Pond
-INSERT INTO owners (full_name, age)
-VALUES ('Melody Pond', 77);
-
--- Insert Dean Winchester
-INSERT INTO owners (full_name, age)
-VALUES ('Dean Winchester', 14);
-
--- Insert Jodie Whittaker
-INSERT INTO owners (full_name, age)
-VALUES ('Jodie Whittaker', 38);
 
 SELECT a.name
 FROM animals a

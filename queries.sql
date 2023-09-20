@@ -67,3 +67,98 @@ SET species = 'unspecified';
 SELECT species from animals;
 ROLLBACK;
 SELECT species from animals;
+
+ALTER TABLE animals
+DROP COLUMN species;
+
+ALTER TABLE animals
+ADD CONSTRAINT fk_owner
+FOREIGN KEY (owner_id)
+REFERENCES owners(id);
+
+ALTER TABLE animals
+ADD COLUMN owner_id integer;
+
+ALTER TABLE animals
+ADD CONSTRAINT fk_species
+FOREIGN KEY (species_id)
+REFERENCES species(id);
+
+ALTER TABLE animals
+ADD COLUMN species_id integer;
+
+CREATE TABLE species (
+    id serial PRIMARY KEY,
+    name varchar(255)
+);
+
+CREATE TABLE owners (
+    id serial PRIMARY KEY,
+    full_name varchar(255),
+    age integer
+);
+
+-- Insert Pokemon
+INSERT INTO species (name)
+VALUES ('Pokemon');
+
+-- Insert Digimon
+INSERT INTO species (name)
+VALUES ('Digimon');
+
+-- Insert Sam Smith
+INSERT INTO owners (full_name, age)
+VALUES ('Sam Smith', 34);
+
+-- Insert Jennifer Orwell
+INSERT INTO owners (full_name, age)
+VALUES ('Jennifer Orwell', 19);
+
+-- Insert Bob
+INSERT INTO owners (full_name, age)
+VALUES ('Bob', 45);
+
+-- Insert Melody Pond
+INSERT INTO owners (full_name, age)
+VALUES ('Melody Pond', 77);
+
+-- Insert Dean Winchester
+INSERT INTO owners (full_name, age)
+VALUES ('Dean Winchester', 14);
+
+-- Insert Jodie Whittaker
+INSERT INTO owners (full_name, age)
+VALUES ('Jodie Whittaker', 38);
+
+SELECT a.name
+FROM animals a
+INNER JOIN species s ON a.species_id = s.id
+WHERE s.name = 'Pokemon';
+
+SELECT o.full_name, COALESCE(array_agg(a.name), '{}') AS owned_animals
+FROM owners o
+LEFT JOIN animals a ON o.id = a.owner_id
+GROUP BY o.full_name;
+
+SELECT s.name AS species_name, COUNT(*) AS total_animals
+FROM animals a
+INNER JOIN species s ON a.species_id = s.id
+GROUP BY s.name;
+
+SELECT a.name
+FROM animals a
+INNER JOIN owners o ON a.owner_id = o.id
+INNER JOIN species s ON a.species_id = s.id
+WHERE o.full_name = 'Jennifer Orwell' AND s.name = 'Digimon';
+
+SELECT a.name
+FROM animals a
+INNER JOIN owners o ON a.owner_id = o.id
+WHERE o.full_name = 'Dean Winchester' AND a.escape_attempts = 0;
+
+SELECT o.full_name, COUNT(a.id) AS total_animals_owned
+FROM owners o
+LEFT JOIN animals a ON o.id = a.owner_id
+GROUP BY o.full_name
+ORDER BY total_animals_owned DESC
+LIMIT 1;

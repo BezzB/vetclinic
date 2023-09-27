@@ -31,14 +31,7 @@ CREATE TABLE specializations (
     FOREIGN KEY (species_id) REFERENCES species(id)
 );
 
-CREATE TABLE visits (
-    id serial PRIMARY KEY,
-    vet_id integer,
-    animal_id integer,
-    visit_date date,
-    FOREIGN KEY (vet_id) REFERENCES vets(id),
-    FOREIGN KEY (animal_id) REFERENCES animals(id)
-);
+CREATE TABLE visits (animal_id integer, vet_id integer, visit_date date, PRIMARY KEY (animal_id, vet_id, visit_date), FOREIGN KEY (animal_id) REFERENCES animals (id), FOREIGN KEY (vet_id) REFERENCES vets (id));
 ALTER TABLE animals
 DROP COLUMN species;
 

@@ -68,3 +68,6 @@ CREATE TABLE owners (
     full_name varchar(255),
     age integer
 );
+
+
+CREATE INDEX idx_animal_id ON visits (animal_id);

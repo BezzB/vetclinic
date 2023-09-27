@@ -177,3 +177,4 @@ WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'William Tatcher')
 ORDER BY v.visit_date DESC
 LIMIT 1;
 
+EXPLAIN ANALYZE SELECT * FROM owners WHERE email = 'owner_18327@mail.com';

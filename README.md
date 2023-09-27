@@ -6,6 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Schema Diagram](#diagram)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
 - [👥 Authors](#authors)
@@ -44,6 +45,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Database Schema Diagram <a name="diagram"></a>
+
+> Schema Diagram
+<a href="https://drawsql.app/teams/dennis-19/diagrams/vet-clinic" target="_blank">Schema diagram</a>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

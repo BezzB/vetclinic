@@ -177,4 +177,9 @@ WHERE v.vet_id = (SELECT id FROM vets WHERE name = 'William Tatcher')
 ORDER BY v.visit_date DESC
 LIMIT 1;
 
+Vet clinic database: database performance audit
+
 EXPLAIN ANALYZE SELECT * FROM owners WHERE email = 'owner_18327@mail.com';
+SELECT COUNT(*) FROM visits WHERE animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits WHERE vet_id = 2;
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits WHERE animal_id = 4;

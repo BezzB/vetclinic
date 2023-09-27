@@ -56,7 +56,13 @@
 
 > You can get started by instaling postgreSql and visual studio
 
+To get a local copy up and running, follow these steps.
 
+### Setup
+
+Clone this repository to your desired folder:
+
+git clone https://github.com/boniface193/postgres.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,12 +78,38 @@
 - Twitter: [@Bezz](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
+👤 **Author2**
+Ikechukwu
+
+- GitHub: [@boniface193](https://github.com/boniface193)
+- Twitter: [@bidtechnologies](https://twitter.com/bidtechnologies)
+- LinkedIn: [boniface-ikechukwu](https://www.linkedin.com/in/boniface-ikechukwu/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please give me a star
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank microverse
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
 
